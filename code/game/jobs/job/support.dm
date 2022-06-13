@@ -57,8 +57,8 @@
 	title = "Shaft Miner"
 	flag = JOB_MINER
 	department_flag = JOBCAT_SUPPORT
-	total_positions = 6
-	spawn_positions = 8
+	total_positions = 0
+	spawn_positions = 0
 	is_supply = 1
 	supervisors = "the quartermaster"
 	department_head = list("Head of Personnel")

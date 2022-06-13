@@ -1349,6 +1349,55 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	cost = 50
 	containername = "plasteel sheets crate"
 
+/datum/supply_packs/materials/diamond25
+	name = "25 Diamond Crate"
+	contains = list(/obj/item/stack/sheet/mineral/diamond)
+	amount = 25
+	cost = 50
+	containername = "diamonds crate"
+
+/datum/supply_packs/materials/uranium25
+	name = "25 Uranium Crate"
+	contains = list(/obj/item/stack/sheet/mineral/uranium)
+	amount = 25
+	cost = 35
+	containername = "uranium crate"
+
+/datum/supply_packs/materials/plasma25
+	name = "25 Plasma Crate"
+	contains = list(/obj/item/stack/sheet/mineral/plasma)
+	amount = 25
+	cost = 35
+	containername = "plasma crate"
+
+/datum/supply_packs/materials/gold25
+	name = "25 Gold Crate"
+	contains = list(/obj/item/stack/sheet/mineral/gold)
+	amount = 25
+	cost = 35
+	containername = "gold crate"
+
+/datum/supply_packs/materials/silver25
+	name = "25 Silver Crate"
+	contains = list(/obj/item/stack/sheet/mineral/silver)
+	amount = 25
+	cost = 35
+	containername = "silver crate"
+
+/datum/supply_packs/materials/titanium25
+	name = "25 Titanium Crate"
+	contains = list(/obj/item/stack/sheet/mineral/titanium)
+	amount = 25
+	cost = 35
+	containername = "titanium crate"
+
+/datum/supply_packs/materials/bluespace10
+	name = "10 Bluespace Crate"
+	contains = list(/obj/item/stack/ore/bluespace_crystal/refined)
+	amount = 10
+	cost = 50
+	containername = "bluespace crate"
+
 /datum/supply_packs/materials/glass50
 	name = "50 Glass Sheets Crate"
 	contains = list(/obj/item/stack/sheet/glass)
