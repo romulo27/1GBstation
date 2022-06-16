@@ -126,6 +126,7 @@
 				squash(hit_atom)
 
 /obj/item/reagent_containers/food/snacks/grown/proc/squash(atom/target)
+/*
 	var/turf/T = get_turf(target)
 	if(ispath(splat_type, /obj/effect/decal/cleanable/plant_smudge))
 		if(filling_color)
@@ -147,7 +148,7 @@
 	for(var/A in T)
 		if(reagents)
 			reagents.reaction(A)
-
+*/
 	qdel(src)
 
 /obj/item/reagent_containers/food/snacks/grown/On_Consume(mob/M, mob/user)
