@@ -87,7 +87,7 @@
 
 	// Things that can go wrong
 	/// Allows people to access a vendor that's normally access restricted.
-	emagged = 0
+	emagged = FALSE
 	/// Shocks people like an airlock
 	var/seconds_electrified = 0
 	/// Fire items at customers! We're broken!
@@ -1141,7 +1141,7 @@
 					  /obj/item/ammo_box/foambox/riot = 20,
 					  /obj/item/toy/katana = 10,
 					  /obj/item/twohanded/dualsaber/toy = 5,
-					  /obj/item/toy/cards/deck/syndicate = 10) //Gambling and it hurts, making it a +18 item
+					  /obj/item/deck/cards/syndicate = 10) //Gambling and it hurts, making it a +18 item
 	armor = list(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 0, bio = 0, rad = 0, fire = 100, acid = 50)
 	resistance_flags = FIRE_PROOF
 
@@ -2164,7 +2164,8 @@
 					/obj/item/clothing/shoes/laceup = 2,
 					/obj/item/clothing/shoes/white = 2,
 					/obj/item/clothing/shoes/black = 2,
-					/obj/item/clothing/accessory/waistcoat = 2)
+					/obj/item/clothing/accessory/waistcoat = 2,
+					/obj/item/reagent_containers/glass/rag = 3)
 	contraband = list(/obj/item/toy/figure/crew/chef = 1)
 	refill_canister = /obj/item/vending_refill/chefdrobe
 

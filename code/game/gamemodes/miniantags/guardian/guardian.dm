@@ -14,8 +14,8 @@
 	speed = 0
 	mob_biotypes = NONE
 	a_intent = INTENT_HARM
-	can_change_intents = 0
-	stop_automated_movement = 1
+	can_change_intents = FALSE
+	stop_automated_movement = TRUE
 	flying = TRUE
 	attack_sound = 'sound/weapons/punch1.ogg'
 	minbodytemp = 0
@@ -33,7 +33,7 @@
 	var/summoned = FALSE
 	var/cooldown = 0
 	var/damage_transfer = 1 //how much damage from each attack we transfer to the owner
-	var/light_on = 0
+	var/light_on = FALSE
 	var/luminosity_on = 3
 	var/mob/living/summoner
 	var/range = 10 //how far from the user the spirit can be
@@ -228,7 +228,7 @@
 /obj/item/guardiancreator
 	name = "deck of tarot cards"
 	desc = "An enchanted deck of tarot cards, rumored to be a source of unimaginable power. "
-	icon = 'icons/obj/toy.dmi'
+	icon = 'icons/obj/playing_cards.dmi'
 	icon_state = "deck_syndicate_full"
 	var/used = FALSE
 	var/theme = "magic"
@@ -253,7 +253,7 @@
 	if(has_guardian(user))
 		to_chat(user, "You already have a [mob_name]!")
 		return
-	if(user.mind && (user.mind.changeling || user.mind.has_antag_datum(/datum/antagonist/vampire)))
+	if(user.mind && (ischangeling(user) || user.mind.has_antag_datum(/datum/antagonist/vampire)))
 		to_chat(user, "[ling_failure]")
 		return
 	if(used == TRUE)

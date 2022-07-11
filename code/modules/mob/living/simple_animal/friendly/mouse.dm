@@ -30,7 +30,7 @@
 	atmos_requirements = list("min_oxy" = 16, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 223		//Below -50 Degrees Celcius
 	maxbodytemp = 323	//Above 50 Degrees Celcius
-	universal_speak = 0
+	universal_speak = FALSE
 	can_hide = 1
 	holder_type = /obj/item/holder/mouse
 	can_collar = 1
@@ -63,13 +63,13 @@
 
 /mob/living/simple_animal/mouse/handle_automated_movement()
 	. = ..()
-	if(resting)
+	if(IS_HORIZONTAL(src))
 		if(prob(1))
-			StopResting()
+			stand_up()
 		else if(prob(5))
 			custom_emote(EMOTE_AUDIBLE, "snuffles")
 	else if(prob(0.5))
-		StartResting()
+		lay_down()
 
 /mob/living/simple_animal/mouse/New()
 	..()

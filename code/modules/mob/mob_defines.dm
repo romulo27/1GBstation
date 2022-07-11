@@ -50,7 +50,6 @@
 	var/med_record = ""
 	var/sec_record = ""
 	var/gen_record = ""
-	var/lying = 0
 	var/lying_prev = 0
 	var/lastpuke = 0
 	var/can_strip = 1
@@ -157,8 +156,6 @@
 
 	var/area/lastarea = null
 
-	var/digitalcamo = 0 // Can they be tracked by the AI?
-
 	var/has_unlimited_silicon_privilege = 0 // Can they interact with station electronics
 
 	var/atom/movable/remote_control //Calls relaymove() to whatever it is
@@ -166,10 +163,8 @@
 	var/obj/control_object //Used by admins to possess objects. All mobs should have this var
 
 	//Whether or not mobs can understand other mobtypes. These stay in /mob so that ghosts can hear everything.
-	var/universal_speak = 0 // Set to 1 to enable the mob to speak to everyone -- TLE
-	var/universal_understand = 0 // Set to 1 to enable the mob to understand everyone, not necessarily speak
-	var/robot_talk_understand = 0
-	var/alien_talk_understand = 0
+	var/universal_speak = FALSE // Set to TRUE to enable the mob to speak to everyone -- TLE
+	var/universal_understand = FALSE // Set to TRUE to enable the mob to understand everyone, not necessarily speak
 
 	var/has_limbs = 1 //Whether this mob have any limbs he can move with
 
